@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="estilos.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Inicio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Página de inicio.">
+    </head>
+    <body>
+        <div>
+            <br>
+            <header>
+                <div>
+                    <div class="right" background=#e6e9e9>                
+                        <img src="http://joeysolen.webcindario.com/images/UPN.png" width="100" height="100">             
+                    </div>
+                <h2>Universidad Pedagógica Nacional</h2>
+                </div>
+            </header>
+            <br>
+        </div> 
+    <h1>BIENVENIDO</h1>
+<div class="inputs">
+    <form name="envia-get_frm" action="datos.php" method="get">
+        <label>Nombre:</label>
+		<input type="text" name="nombre" required/>
+		<label>Apellido:</label>
+        <input type="text" name="apellido" required />Tabla:</label>
+        <input type="text" name="num1" required />
+        <input class="button" type="submit" name="enviar_btn" value="Enviar" />
+    </form>
+</div>
+
+
+
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+        <div class="text">Imagen 0</div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+        <div class="text">Imagen 1</div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+        <div class="text">Imagen 3</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+<div class="arrastrar">
+    <div id="draggable">
+        <p>What a Drag</p>
+    </div>
+</div>
+    <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+}
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+$( function() {
+    $( "#draggable" ).draggable();
+    });
+    </script>     
+    </body>
+</html>
